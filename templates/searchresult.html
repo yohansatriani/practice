@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+    <!--<head>-->
+        {% block css %}{% endblock %}
+        {% block title %}{{ title }}{% endblock %}
+    <!--</head>-->
+    <!--<body>-->
+        {% block content %}
+        <h1>{{ head }}</h1>
+        <p>You searched for: <strong>{{ query }}</strong></p> 
+        {% if books %}
+        <p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+        <ul>
+        {% for book in books %}
+            <li>{{ book.title }}</li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        <p>No books matched your search criteria.</p>
+        {% endif %}
+        {% endblock %}
+    <!--</body>-->
+<!--</html>-->
