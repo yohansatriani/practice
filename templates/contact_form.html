@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+    <!--<head>-->
+        {% block css %}{% load static %}<link rel="stylesheet" href="{% static 'css/signin.css' %}">{% endblock %}
+        {% block title %}{{ title }}{% endblock %}
+    <!--</head>-->
+    <!--<body>-->
+        {% block content %}
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <main role="main" class="container">
+            {% if form.errors %}
+            <p style="color: red;">Please correct the error{{ form.errors|pluralize }} below.</p>
+            {% endif %}
+            {% load widget_tweaks %}
+            <form class="form-signin" action="" method="post">
+                <h1 class="h3 mb-3 font-weight-normal">Compose</h1>
+                <label for="id_subject" class="sr-only">Subject</label>
+                {% render_field form.subject class="form-control" placeholder="Subject" %}
+                <label for="id_email" class="sr-only">Email address</label>
+                {% render_field form.email class="form-control" placeholder="Email address" %}
+                <label for="id_message" class="sr-only">Message</label>
+                {% render_field form.message class="form-control" placeholder="Message" %}
+                {% csrf_token %}
+                <button class="btn btn-md btn-primary btn-block" type="submit">Submit</button>
+            </form>
+        </main>
+        {% endblock %}
+    <!--</body>-->
+<!--</html>-->

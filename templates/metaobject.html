@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+    <!--<head>-->
+        {% block css %}{% endblock %}
+        {% block title %}{{ title }}{% endblock %}
+    <!--</head>-->
+    <!--<body>-->
+        {% block content %}
+        <h1>{{ head }}</h1>
+        <ol>
+        {% for metaobject, reqobject in object %}
+            <li>{{ metaobject }} : {{ reqobject }}</li>
+        {% endfor %}
+        </ol>
+        {% endblock %}
+    <!--</body>-->
+<!--</html>-->
