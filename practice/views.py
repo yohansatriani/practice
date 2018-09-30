@@ -7,6 +7,12 @@ from practice.forms import ContactForm
 import datetime
 import MySQLdb
 
+#design
+def signin(request):
+    html = render_to_string('signin.html', {'title': "Signin", 'head': "Signin"})
+    return HttpResponse(html)
+
+#practice
 def hello(request):
     return HttpResponse("Hello World")
 

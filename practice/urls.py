@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from practice.views import hello, boot, main, current_datetime, present_time, open_time, right_time, in_time, short_time, hours_ahead, login, film_list, request_data, meta_data, contact
+from practice.views import hello, boot, main, current_datetime, present_time, open_time, right_time, in_time, short_time, hours_ahead, login, film_list, request_data, meta_data, contact, signin
 from books.views import search_form, search
 
 urlpatterns = [
+    #design
+    path('signin/', signin),
     #admin
     path('admin/', admin.site.urls),
     #basictemplate
