@@ -6,10 +6,11 @@ body{
 }
 
 #cstm-login-box{
+    width: 450px;
     padding: 50px 80px 50px 80px;
     border: 1px solid #BDD6D4;
     border-radius: 10px;
-    background-color: #FEFEFE;
+    background-color: #FDFDFD;
 }
 
 #cstm-submit-box{
@@ -26,4 +27,8 @@ body{
 
 .cstm-primary{
     background-color: #7ACEEA;
+}
+
+#cstm-login-title{
+    margin-bottom: 1rem;
 }

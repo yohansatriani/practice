@@ -8,26 +8,27 @@
     <!--<body>-->
         {% block content %}
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="login-nav">
-            <a class="navbar-brand" href="#">falconet</a>
+            <a class="navbar-brand" href="#"><img src="{% static 'images/falconet-logo.png' %}" class="mr-2" width=30" height="30"/><small>falconet</small></a>
         </nav>
         <div class="container">
             <div class="row justify-content-center align-items-center" id="cstm-login-row">
-                <div class="col-sm-auto" id="cstm-login-box">
-                    <h1><small>LOGIN</small></h1>
+                <div class="col-md-auto" id="cstm-login-box">
+                    <!--<img src="{% static 'images/falconet-logo.png' %}" width="80" height="80" class="mx-auto d-block">-->
+                    <p class="text-center small">Login to discover the network</p>
                     <form>
-                        <div class="form-group cstm-login-form">
+                        <div class="form-group">
                             <label class="control-label" for="inputUsername">Username</label>
                             <input type="email" class="form-control" id="inputUsername" aria-describedby="usernameHelp"/>
                         </div>
-                        <div class="form-group cstm-login-form">
+                        <div class="form-group">
                             <label class="control-label" for="inputPassword">Password</label>
                             <input type="password" class="form-control" id="inputPassword"/>
                         </div>
-                        <div class="form-check cstm-login-form">
+                        <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" value="" id="remembermeCheck"/>
                             <label class="form-check-label small" for="remembermeCheck">Remember me</label>
                         </div>
-                        <button type="submit" class="btn cstm-primary">Submit</button>
+                        <button type="submit" class="btn cstm-primary">Login</button>
                     </form>
                 </div>
             </div>

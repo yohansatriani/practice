@@ -9,7 +9,7 @@ import MySQLdb
 
 #design
 def signin(request):
-    html = render_to_string('signin.html', {'title': "Signin", 'head': "Signin"})
+    html = render_to_string('signin.html', {'title': "Login | falconet", 'head': "Login"})
     return HttpResponse(html)
 
 #practice
